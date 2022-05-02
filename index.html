@@ -18,7 +18,10 @@
             <div class="heroText">
                 <h1><span>Deje que nuestra familia</span><br>Cuide de la suya</h1>
                 <p>Residencial Stella, hogar para adultos mayores</p>
-                <form action="">
+                <form action="https://formsubmit.co/rich4shioo@gmail.com" method="POST">
+                    <input type="hidden" name="_next" value="http://192.168.1.119:5500/">
+                    <input type="hidden" name="_template" value="box">
+                    <input type="hidden" name="_subject" value="Nuevo mensaje de la web!">
                     <input type="email" name="email" id="email" placeholder="Correo electrónico"> 
                     <input type="submit" value="Consultas">
                 </form>
@@ -27,7 +30,7 @@
     </div>
 
     <div class="navSection">
-        <nav>
+        <nav class="navWide">
             <ul>
                 <li><a href="#quienes">Quienes somos?</a></li>
                 <li><a href="#instalaciones">Instalaciones</a></li>
@@ -35,9 +38,18 @@
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
+        <nav class="navSlim">
+            <ul>
+                <li><a href="#quienesMobile">Quienes somos?</a></li>
+                <li><a href="#instalacionesMobile">Instalaciones</a></li>
+                <li><a href="#ubicacionMobile">Ubicación</a></li>
+                <li><a href="#contactoMobile">Contacto</a></li>
+            </ul>
+        </nav>
     </div>
 
     <div id="quienes" class="quienes">
+        <div class="quienesMobile" id="quienesMobile"></div>
         <h2>Quienes somos?</h2>
         <div class="articles">
             <article>
@@ -52,6 +64,7 @@
     </div>
 
     <div id="instalaciones" class="instalaciones">
+        <div class="instalacionesMobile" id="instalacionesMobile"></div>
         <h2>Nuestras instalaciones</h2>
         <p class="instSubtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, omnis!</p>
         <div class="instalacionesGrid">
@@ -84,6 +97,7 @@
     </div>    
 
     <div id="ubicacion" class="ubicacion">
+        <div class="ubicacionMobile" id="ubicacionMobile"></div>
         <div class="ubicacionBG">
             <div class="ubicacionText">
                 <h2>Estamos donde mas<br>nos necesitas.</h2>
@@ -98,13 +112,17 @@
     </div>
 
     <div id="contacto" class="contacto">
+        <div class="contactoMobile" id="contactoMobile"></div>
         <div class="form">
             <h2>Contacto</h2>
-            <form action="" class="endForm">
-                <input type="text" name="name" id="name" placeholder="Name">
-                <input type="email" name="email" id="email" placeholder="Email">
+            <form name="contactForm" id="contactForm" action="https://formsubmit.co/rich4shioo@gmail.com" method="POST" class="endForm">
+                <input type="hidden" name="_next" value="http://192.168.1.119:5500/">
+                <input type="hidden" name="_template" value="box">
+                <input type="hidden" name="_subject" value="Nuevo mensaje de la web!">
+                <input type="text" name="name" id="name" placeholder="Name" required>
+                <input type="email" name="email" id="email" placeholder="Email" required>
                 <input type="number" name="number" id="number" placeholder="Teléfono">
-                <textarea name="" id="" cols="30" rows="11" placeholder="Mensaje"></textarea>
+                <textarea name="texta" id="texta" cols="30" rows="11" placeholder="Mensaje" form="contactForm"></textarea>
                 <input type="submit" value="ENVIAR">
             </form>
         </div>
