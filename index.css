@@ -63,6 +63,7 @@ body{
     border-style: none;
     border-radius: 10px;
     margin-left: -120px;
+    cursor: pointer;
 }
 
 .navSection{
@@ -89,6 +90,7 @@ nav ul li a{
     text-decoration: none;
     color:  white;
     font-weight: bold;
+    cursor: pointer;
     text-transform: capitalize;
 }
 
@@ -132,50 +134,98 @@ article p{
     color: var(--secondary-color);
 }
 
+/* Instalaciones */
 .instalaciones{
     background-color: var(--secondary-color);
+    width: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
 }
 
 .instalaciones h2{    
-    margin: 100px 0;
+    margin-top: 70px;
     font-size: 2.5rem;
 }
 
-.imgContainer{
-    display: flex;
-}
-
-.inst{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 100px;
-}
-
-.inst p{
+.instSubtitle {
     color: white;
     font-size: 1.5rem;
-    margin-bottom: 20px;
-}
-.image{
-    width: 20vw;
-    height: 200px;
-    margin: 20px;
-    border-radius: 10px; 
-    border: 2px solid rgba(0, 0, 0, 0.5);
-    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.589);
-    background-image: url("images/instalaciones.jpg");
-    background-size: cover;
-    background-position: center;
-    background-position: relative;
-    background-repeat: no-repeat;
+    margin: 30px 0;
 }
 
+.instalacionesGrid{
+    display: grid;
+    width: 80%;
+    height: 65%;
+    grid-template-areas: 
+    "img1 img1 img2 img2"
+    "img1 img1 img3 img3";
+    gap: 30px;
+}
+
+.instalacionesArticle{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.instalacionesArticle img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.instalacionesArticle:nth-of-type(1){
+    grid-area: img1;
+}
+
+.instalacionesArticle:nth-of-type(2){
+    grid-area: img2;
+}
+
+.instalacionesArticle:nth-of-type(3){
+    grid-area: img3;
+}
+
+.instalacionesHover h3{
+    font-size: 1.7rem;
+}
+
+.instalacionesHover p{
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 400;
+    width: 80%;
+}
+
+.instalacionesHover{
+    position: absolute;
+    background: #f01bb0c5;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: translateY(100%);
+    transition: transform 0.4s ease-in-out;
+}
+
+.instalacionesArticle:hover .instalacionesHover{
+    transform: translateY(0%);
+}
+
+
+/* Ubicacion */
 .ubicacion{
     position: relative;
     background-color: red;
@@ -295,6 +345,7 @@ article p{
     background-color: var(--main-color);
     padding: 8px 15px;
     border-style: none;
+    cursor: pointer;
     border-radius: 10px;
 }
 
@@ -319,4 +370,282 @@ footer p{
     font-size: 1rem;
     margin-right: 20px;
     color: wheat;
+}
+
+@media screen and (max-width: 600px) {
+    .heroBackground{
+        width: 100%;
+        height: 75vh;
+        background-image: 
+            linear-gradient(90deg, rgba(4, 58, 59, .8) 20%, rgba(238, 88, 143, 0.7) 100%),
+            url("images/background1-mobile.png");
+        filter: grayscale(20%);
+        background-size:cover;
+        background-attachment: fixed;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+    }
+
+    .heroText{
+        position: absolute;
+        width: 80%;
+        top: 50%;
+        transform: translate(0,-50%);
+        text-align: center;
+    }
+    
+    .hero h1{
+        font-weight: 700;
+        font-size: 2rem;
+        color: var(--main-color);
+        line-height: 3.5rem;
+        margin-bottom: 20px;
+    }
+
+    .hero form{
+        display: none;
+    }
+    
+    .hero span{
+        color: white;
+    }
+    
+    .hero p{
+        font-weight: 400;
+        font-size: 1.5rem;
+        color: white;
+        line-height: 2.5rem;
+    }
+
+    nav{
+        background-color: var(--secondary-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
+    nav ul li{
+        display:block;
+        margin: 0;
+        list-style-type: none;
+        font-size: 1rem;
+        line-height: 0.5;
+    }
+
+    .quienes{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+    }
+    
+    .quienes h2{
+        font-size: 1.5rem;
+    }
+    
+    article{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #artInvert{
+        flex-direction: column-reverse;
+    }
+    
+    .articles:first-child{margin-top: 50px;}
+    .articles:last-child{margin-bottom: 50px;}
+    
+    .draw img{
+        width: 300px;
+        margin: 100px 0;
+    }
+    
+    article p{
+        width: 80%;
+        font-size: 1.2rem;
+        line-height: 1.4;
+        color: var(--secondary-color);
+    }
+    
+    .instalaciones h2{    
+        margin-top: 30px;
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .instSubtitle {
+        text-align: center;
+        color: white;
+        font-size: 1.2rem;
+        margin: 30px 0;
+    }
+    
+    .instalacionesGrid{
+        display: grid;
+        width: 90%;
+        grid-template-areas: 
+        "img1 img1"
+        "img2 img2"
+        "img3 img3";
+        gap: 20px;
+    }
+    
+    .instalacionesArticle{
+        margin: 0;
+        padding: 0;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    
+    .instalacionesArticle img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        cursor: pointer;
+    }
+    
+    .instalacionesArticle:nth-of-type(1){
+        grid-area: img1;
+    }
+    
+    .instalacionesArticle:nth-of-type(2){
+        grid-area: img2;
+    }
+    
+    .instalacionesArticle:nth-of-type(3){
+        grid-area: img3;
+    }
+
+    .instalacionesHover{
+        display: none;
+    }
+
+    
+    .ubicacion{
+        position: relative;
+        width: 100%;
+        height: 95vh;
+    }
+
+    .ubicacion h2{
+        margin: 40px;
+        font-size: 1.5rem;
+        color: black;
+        text-align: center;
+    }
+    
+    .ubicacionBG{    
+        width: 100%;
+        height: 100%;
+        background-image: url("images/background2.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        background-position: relative;
+        background-repeat: no-repeat;
+        display: flex;
+    }
+    
+    .ubicacionText{
+        position:initial;
+        color: black;
+        text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.829);
+    }
+    
+    .ubicacionText ul{
+        margin: 0;
+        position: absolute;
+        bottom: 30px;
+        right: 30px;
+        list-style: none;
+        line-height: 1.8;
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+
+    .ubicacion p{
+        display: none;
+    }
+
+    .contacto{
+        background-color: var(--secondary-color);
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .contacto .form{
+        width: 320px;
+        height: 70%;
+        background-color: rgba(235, 240, 220, 0.788);
+        border: 3px solid var(--main-color);
+        border-radius: 20px;
+        padding: 20px;
+        margin-top: 30px;
+        margin-bottom: 80px;
+        box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.829);
+    }
+    
+    .mensajeFinal{
+        width: 350px;
+        margin: 0;
+        text-align: center;
+    }
+
+    .mensajeFinal p{
+        display: none;
+    }
+    
+    
+    .drawFinal img{
+        margin-top: 80px;
+        width: 200px;
+    }
+    
+    .contacto h2{
+        font-size: 1.7rem;
+    }
+    
+    .endForm{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .contacto input{
+        margin-top: 10px;
+        border-style: none;
+        padding: 10px 15px;
+        border-radius: 10px;
+        outline: none;
+    }
+    
+    .contacto input[type='submit']{
+        color: white;
+        background-color: var(--main-color);
+        padding: 8px 15px;
+        border-style: none;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+    
+    .contacto textarea{
+        margin-top: 10px;
+        border-style: none;
+        padding: 10px 15px;
+        border-radius: 10px;
+        outline: none;
+        resize: none;
+    }
 }
