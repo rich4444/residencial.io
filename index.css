@@ -9,7 +9,7 @@ body{
 }
 
 .heroBackground{
-    width: 100vw;
+    width: 100%;
     height: 90vh;
     background-image: 
         linear-gradient(90deg, rgb(4, 58, 59, 0.7) 20%, rgba(238, 88, 143, 0.2) 70%),
@@ -107,7 +107,7 @@ nav ul li a:hover{
 .quienes{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 80%;
     margin: auto;
     align-items: center;
 }
@@ -118,34 +118,43 @@ nav ul li a:hover{
 }
 
 article{
-    width: 80%;
+    width: 75%;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
+    margin-bottom: 40px;
 }
 
-.articles:first-child{margin-top: 50px;}
-.articles:last-child{margin-bottom: 50px;}
+.articles:first-child{margin-top: 50px; margin-bottom: 50px;}
+.articles:last-child{margin-bottom: 100px;}
 
 .draw img{
-    width: 300px;
+    width: 250px;
 }
 
 article p{
-    margin: 10px 80px;
+    width: 50%;
     padding: 0;
-    font-size: 1.2rem;
-    line-height: 1.4;
+    font-size: 1.4rem;
+    line-height: 1.6;
     color: var(--secondary-color);
 }
+
+article p:first-child{
+    margin-right: 80px;
+}
+
+article p:last-child{
+    margin-left: 80px;
+}
+
 
 /* Instalaciones */
 .instalaciones{
     background-color: var(--secondary-color);
     width: 100%;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -157,21 +166,23 @@ article p{
 }
 
 .instSubtitle {
-    max-width: 90%;
+    max-width: 80%;
     text-align: center;
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    line-height: 1.8;
     margin: 30px 0;
 }
 
 .instalacionesGrid{
     display: grid;
+    margin-bottom: 70px;
     width: 80%;
-    height: 65%;
+    height: auto;
     grid-template-areas: 
-    "img1 img1 img2 img2"
-    "img1 img1 img3 img3";
-    gap: 30px;
+    "img4 img1 img1 img2"
+    "img5 img1 img1 img3";
+    gap: 15px;
 }
 
 .instalacionesArticle{
@@ -202,20 +213,35 @@ article p{
     grid-area: img3;
 }
 
+.instalacionesArticle:nth-of-type(4){
+    grid-area: img4;
+}
+
+.instalacionesArticle:nth-of-type(5){
+    grid-area: img5;
+}
+
 .instalacionesHover h3{
     font-size: 1.7rem;
 }
 
 .instalacionesHover p{
-    font-size: 1.2rem;
-    color: white;
-    font-weight: 400;
+    text-align: center;
+    font-size: 1.1rem;
+    color: black;
+    font-weight: 600;
     width: 80%;
 }
 
+.instalacionesArticle:first-child .instalacionesHover p{
+    font-size: 1.2rem;
+}
+
+
 .instalacionesHover{
     position: absolute;
-    background: #f01bb0c5;
+    background: var(--secondary-color);
+    filter: opacity(0.9);
     top: 0;
     left: 0;
     width: 100%;
@@ -224,7 +250,6 @@ article p{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
     transform: translateY(100%);
     transition: transform 0.4s ease-in-out;
 }
@@ -242,7 +267,7 @@ article p{
 }
 
 .ubicacion h2{
-    margin: 100px 0;
+    margin: 80px 0;
     font-size: 2.5rem;
     color: black;
 }
@@ -257,7 +282,7 @@ article p{
         rgba(6, 120, 122, 0.4) 50%,
         rgba(6, 120, 122, 1) 80%,
         rgb(6, 120, 122, 1) 100%),
-        url("images/background2.jpg");
+        url("images/background2.png");
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -268,6 +293,7 @@ article p{
 .ubicacionText{
     position: absolute;
     width: 600px;
+    height: 100%;
     right: 80px;
     color: white;
     text-align: right;
@@ -288,15 +314,23 @@ article p{
     margin-left: 10px;
 }
 
+.ubicacionText ul li a{
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+}
+
 .ubicacion p{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: black;
     font-weight: 700;
+    position: absolute;
+    bottom: 30px;
+    right: 0;
 }
 
 .contacto{
     background-color: var(--secondary-color);
-    height: 95vh;
     width: 100%;
     display: flex;
     padding: 50px;
@@ -305,7 +339,7 @@ article p{
 
 .contacto .form{
     width: 400px;
-    height: 90%;
+    height: fit-content;
     background-color: rgba(235, 240, 220, 0.788);
     border: 3px solid var(--main-color);
     border-radius: 20px;
@@ -317,9 +351,12 @@ article p{
 .mensajeFinal{
     width: 400px;
     margin: 30px 60px;
-    text-align: center;
 }
 
+.mensajeFinal a{
+    color: white;
+    cursor: pointer;
+}
 
 .drawFinal img{
     margin-top: 80px;
@@ -374,8 +411,9 @@ footer{
     border-top: 1px solid black;
 }
 
-footer p{
-    font-size: 1rem;
+footer p a{
+    font-size: 0.7rem;
+    text-decoration: none;
     margin-right: 20px;
     color: wheat;
 }
@@ -386,6 +424,15 @@ footer p{
 @media screen and (max-width: 850px) {
     .navWide{ display: none; }
     .navSlim{ display: block; }
+
+    
+    article p:first-child{
+        margin-right: 0px;
+    }
+
+    article p:last-child{
+        margin-left: 0px;
+    }
 
     .contactoMobile{
         display: block;
@@ -481,11 +528,11 @@ footer p{
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 80%;
+        width: 90%;
     }
     
     .quienes h2{
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
     
     article{
@@ -537,9 +584,9 @@ footer p{
         display: grid;
         width: 90%;
         grid-template-areas: 
+        "img2 img3"
         "img1 img1"
-        "img2 img2"
-        "img3 img3";
+        "img4 img5";
         gap: 20px;
         margin-bottom: 40px;
     }
@@ -580,18 +627,13 @@ footer p{
     }
 
     .ubicacion h2{
-        position: relative;
-        width: 80%;
-        margin: 40px auto;
-        font-size: 1.5rem;
-        color: black;
-        text-align: center;
+       display: none;
     }
     
     .ubicacionBG{    
         width: 100%;
         height: 100%;
-        background-image: url("images/background2.jpg");
+        background-image: url("images/background2.png");
         background-size: cover;
         background-attachment: fixed;
         background-position: center;
@@ -609,20 +651,30 @@ footer p{
     .ubicacionText ul{
         margin: 0;
         position: absolute;
-        bottom: 30px;
+        top: 30px;
         right: 30px;
         list-style: none;
         line-height: 1.8;
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         font-weight: 400;
     }
 
-    .ubicacionText ul li{        
+    .ubicacionText ul li {   
         font-weight: 700;
+        color: black;
+        text-shadow: 2px 2px 3px #ffffff, -2px -2px 3px #ffffff;
+    }
+
+    .ubicacion ul li a{
+        color: black;
     }
 
     .ubicacion p{
-        display: none;
+        position: absolute;
+        bottom: 10px;
+        left: 10px;    
+        text-align: left;
+        font-size: 1.2rem;
     }
 
     .contacto{
@@ -646,22 +698,30 @@ footer p{
         margin-top: 30px;
         margin-bottom: 80px;
         box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.829);
+        max-width: 90%;
     }
     
     .mensajeFinal{
         width: 350px;
+        max-width: 90%;
         margin: 0;
         text-align: center;
     }
 
     .mensajeFinal p{
-        display: none;
+        line-height: 1.6;
+        max-width: 90%;
+        margin: 0;
     }
     
     
     .drawFinal img{
         margin-top: 80px;
         width: 200px;
+        max-width: 90%;
+    }
+    .drawFinal{
+        max-width: 90%;
     }
     
     .contacto h2{
@@ -697,5 +757,13 @@ footer p{
         border-radius: 10px;
         outline: none;
         resize: none;
+    }
+
+    .articles{
+        max-width: 90%;
+    }
+
+    .ubicacionText{
+        max-width: 90%;
     }
 }

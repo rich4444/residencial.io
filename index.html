@@ -19,10 +19,10 @@
                 <h1><span>Deje que nuestra familia</span><br>Cuide de la suya</h1>
                 <p>Residencial Stella, hogar para adultos mayores</p>
                 <form action="https://formsubmit.co/rich4shioo@gmail.com" method="POST">
-                    <input type="hidden" name="_next" value="http://casastella.me/">
+                    <input type="hidden" name="_next" value="http://192.168.1.119:5500/">
                     <input type="hidden" name="_template" value="box">
                     <input type="hidden" name="_subject" value="Nuevo mensaje de la web!">
-                    <input type="email" name="email" id="email" placeholder="Correo electrónico"> 
+                    <input type="email" name="email" id="email" placeholder="Correo electrónico" required> 
                     <input type="submit" value="Consultas">
                 </form>
             </div>
@@ -32,7 +32,7 @@
     <div class="navSection">
         <nav class="navWide">
             <ul>
-                <li><a href="#quienes">Quienes somos?</a></li>
+                <li><a href="#quienes">¿Quienes somos?</a></li>
                 <li><a href="#instalaciones">Instalaciones</a></li>
                 <li><a href="#ubicacion">Ubicación</a></li>
                 <li><a href="#contacto">Contacto</a></li>
@@ -40,7 +40,7 @@
         </nav>
         <nav class="navSlim">
             <ul>
-                <li><a href="#quienesMobile">Quienes somos?</a></li>
+                <li><a href="#quienesMobile">¿Quienes somos?</a></li>
                 <li><a href="#instalacionesMobile">Instalaciones</a></li>
                 <li><a href="#ubicacionMobile">Ubicación</a></li>
                 <li><a href="#contactoMobile">Contacto</a></li>
@@ -50,15 +50,15 @@
 
     <div id="quienes" class="quienes">
         <div class="quienesMobile" id="quienesMobile"></div>
-        <h2>Quienes somos?</h2>
+        <h2>¿Quienes somos?</h2>
         <div class="articles">
-            <article>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt nulla quibusdam dolores quos, maxime velit illo debitis sit voluptates explicabo aperiam quis expedita, nisi labore excepturi, ducimus amet porro distinctio.</p>
-                <div class="draw"><img src="images/img1.svg" alt=""></div>
+            <article >
+                <div class="draw"><img src="images/img2.svg" alt=""></div>
+                <p>No somos una residencial. Somos una casa de familia con experiencia en el cuidado de personas mayores.</p>
             </article>
             <article id="artInvert">
-                <div class="draw"><img src="images/img2.svg" alt=""></div>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt nulla quibusdam dolores quos, maxime velit illo debitis sit voluptates explicabo aperiam quis expedita, nisi labore excepturi, ducimus amet porro distinctio.</p>
+                <p>Si usted desea que sus seres queridos sean tratados con cariño y dignidad, contáctenos. Contamos con excelentes referencias.</p>
+                <div class="draw"><img src="images/img1.svg" alt=""></div>
             </article>
         </div>
     </div>
@@ -66,30 +66,41 @@
     <div id="instalaciones" class="instalaciones">
         <div class="instalacionesMobile" id="instalacionesMobile"></div>
         <h2>Nuestras instalaciones</h2>
-        <p class="instSubtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, omnis!</p>
+        <p class="instSubtitle">Contamos con cómodas instalaciones para hacer que se sientan como en casa.<br>Cómodos dormitorios con máximo de tres camas.<br>Dos baños, amplia sala de estar, y patio con espacios verdes.</p>
         <div class="instalacionesGrid">
 
             <article class="instalacionesArticle">
-                <img src="images/instalaciones.jpg" alt="foto instalaciones">
+                <img src="images/1.png" alt="foto instalaciones">
                 <div class="instalacionesHover">
-                    <h3>Titulo</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis animi in illum optio saepe aliquam.</p>
+                    <p>Celebramos los cumpleaños todos juntos como una familia.<br>Los familiares también están invitados!</p>
                 </div>
             </article>
 
             <article class="instalacionesArticle">
-                <img src="images/instalaciones.jpg" alt="foto instalaciones">
+                <img src="images/2.png" alt="foto instalaciones">
                 <div class="instalacionesHover">
-                    <h3>Titulo</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis animi in illum optio saepe aliquam.</p>
+                    <p>Disfrutando de los días lindos bajo la sombra.</p>
                 </div>
             </article>
 
             <article class="instalacionesArticle">
-                <img src="images/instalaciones.jpg" alt="foto instalaciones">
+                <img src="images/3.png" alt="foto instalaciones">
                 <div class="instalacionesHover">
-                    <h3>Titulo</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis animi in illum optio saepe aliquam.</p>
+                    <p>Nunca se es demasiado grande para festejar tu cumple!</p>
+                </div>
+            </article>
+
+            <article class="instalacionesArticle">
+                <img src="images/4.png" alt="foto instalaciones">
+                <div class="instalacionesHover">
+                    <p>Habitaciones de 2 o 3 camas</p>
+                </div>
+            </article>
+
+            <article class="instalacionesArticle">
+                <img src="images/5.png" alt="foto instalaciones">
+                <div class="instalacionesHover">
+                    <p>Cómodas y bien amuebladas.</p>
                 </div>
             </article>
 
@@ -102,11 +113,12 @@
             <div class="ubicacionText">
                 <h2>Estamos donde mas<br>nos necesitas.</h2>
                 <ul>
-                    <li>Lorem ipsum dolor sit. <i class="fa-solid fa-map"></i></li>
-                    <li>2222 2222 <i class="fa-solid fa-phone"></i></li>
-                    <li>099 999 999 <i class="fa-brands fa-whatsapp-square"></i></li>
+                    <li><a href="https://www.google.com.uy/maps/@-34.7151277,-55.9666492,17.96z?hl=es-419" target="_blank">Vicente Gorostiaga M2 <i class="fa-solid fa-map"></i></a></li>
+                    <li><small>Entre Aurelio Casas y Carlos Roxlo</small></li>
+                    <li><a href="tel:2292 3046">2292 3046 <i class="fa-solid fa-phone" target="_blank"></i></a></li>
+                    <li><a href="https://wa.me/59894514286?text=Quisiera saber mas sobre casa Stella!" target="_blank"> 094 514 286 <i class="fa-brands fa-whatsapp-square"></i></a></li>
                 </ul>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                <p>Estamos al lado de la terminal de COPSA<br>Haz click en los números o en la dirección</p>
             </div>
         </div>
     </div>
@@ -116,7 +128,7 @@
         <div class="form">
             <h2>Contacto</h2>
             <form name="contactForm" id="contactForm" action="https://formsubmit.co/rich4shioo@gmail.com" method="POST" class="endForm">
-                <input type="hidden" name="_next" value="http://casastella.me/">
+                <input type="hidden" name="_next" value="http://192.168.1.119:5500/">
                 <input type="hidden" name="_template" value="box">
                 <input type="hidden" name="_subject" value="Nuevo mensaje de la web!">
                 <input type="text" name="name" id="name" placeholder="Name" required>
@@ -128,12 +140,12 @@
         </div>
         <div class="mensajeFinal">
             <div class="drawFinal"><img src="images/img3.svg" alt=""></div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ullam fugit? Unde iure itaque officiis doloremque earum autem illum molestias, modi consequatur tempore velit dolor qui repellendus voluptas hic quod?</p>
+            <p>Consulte todas sus dudas enviando un correo, o haga click en los <a href="#ubicacion">números</a> para contactarnos directamente por llamada o por whatsapp.<br><br>Haga su reserva ahora. <strong>Los cupos son limitados.</strong></p>
         </div>
     </div>
 
     <footer>
-        <p>Hecho por Ricardo Nardochone 2022</p>
+        <p><a href="https://wa.me/59893966795?text=Necesito un sitio web!" target="_blank">Hecho por Ricardo Nardochone 2022</a></p>
     </footer>
 </body>
 </html>
