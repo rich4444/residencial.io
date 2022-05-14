@@ -320,6 +320,12 @@ article p:last-child{
     color: white;
 }
 
+.ubicacionText ul li a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    color: white;
+}
+
 .ubicacion p{
     font-size: 1.2rem;
     color: black;
@@ -416,6 +422,12 @@ footer p a{
     text-decoration: none;
     margin-right: 20px;
     color: wheat;
+}
+
+footer p a:hover{
+    font-size: 0.75rem;
+    text-decoration: underline;
+    color: white;
 }
 
 .navWide{ display: block; }
