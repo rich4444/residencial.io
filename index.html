@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Casa Stella</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+
+    <!-- ANIMATED ON SCROLL -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+
+    <!-- FONTAWESOME -->
+    <script defer src="https://kit.fontawesome.com/e26da2372a.js" crossorigin="anonymous"></script>
+
+    <!-- NUNITO FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700;900&display=swap" rel="stylesheet">
+
+    <!-- SWIPERJS -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
+
+  
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="./styles/styles.css">
+
+    <!-- CUSTOM JAVASCRIPT -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="hero-text">
+            <h1>
+                Deje que nuestra familia<br />
+                <span class="highlight">Cuide de la suya</span>
+            </h1>
+            <h2>Casa Stella, hogar para adultos mayores</h2>
+        </div>
+
+        <form name="contactForm" id="contactForm" action="https://formsubmit.co/rich4shioo@gmail.com" method="POST">
+            <input type="hidden" name="_next" value="http://casastella.me/#contacted#">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_subject" value="Nuevo mensaje de la web!">
+            <input name="email-top" id="email-top" type="email" placeholder="Email" required>
+            <input class="button" type="submit" value="Consultas">
+        </form>
+    </header>
+
+    <!-- NAVBAR -->
+    <nav>
+        <ul>
+            <li>
+                <a href="#about" class="nav-link">
+                    <i class="fas fa-hand-holding-heart nav-icon"></i>
+                    <p>Sobre nosotros</p>
+                </a>
+            </li>
+            <li>
+                <a href="#facilities" class="nav-link">
+                    <i class="fa fa-home nav-icon"></i>
+                    <p>Instalaciones</p>
+                </a>
+            </li>
+            <li>
+                <a href="#reviews" class="nav-link">
+                    <i class="fa-solid fa-star nav-icon"></i>
+                    <p>Opiniones</p>
+                </a>
+            </li>
+            <li>
+                <a href="#location" class="nav-link">
+                    <i class="fas fa-map-marked nav-icon"></i>
+                    <p>Ubicación</p>
+                </a>
+            </li>
+            <li>
+                <a href="#contact" class="nav-link">
+                    <i class="fas fa-mail-bulk nav-icon"></i>
+                    <p>Contacto</p>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+<!-- ABOUT -->
+    <section id="about">
+        <h1>Quiénes somos</h1>
+
+        <div class="cards-container">
+        <!-- card -->
+        <div class="card">
+            <div class="card-draw"
+            data-aos="fade-down"
+            data-aos-easing="ease-out"
+            data-aos-delay="0"></div>
+
+            <!-- wave transition -->
+            <div class="waves-container">
+                <div class="card-wave">
+                    <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                    <path d="M0.00,49.98 C159.14,-9.36 259.02,111.03 501.97,55.77 L500.00,150.00 L0.00,150.00 Z" style="stroke: none;"></path></svg>
+                </div>
+                <div class="card-wave">
+                    <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                    <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 501.97,55.77 L500.00,150.00 L0.00,150.00 Z" style="stroke: none;"></path></svg>
+                </div>
+            </div>
+
+            <div class="card-text">
+                <p><span class="highlight">No somos una residencial.</span> Somos una casa de familia con experiencia en el cuidado de personas mayores.</p>
+            </div>
+        </div>
+
+        <!-- card -->
+        <div class="card">
+            <div class="card-draw"
+            data-aos="fade-down"
+            data-aos-easing="ease-out"
+            data-aos-delay="200"></div>
+
+            <!-- wave transition -->
+            <div class="waves-container">
+                <div class="card-wave">
+                    <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                    <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 501.97,55.77 L500.00,150.00 L0.00,150.00 Z" style="stroke: none;"></path></svg>                    
+                </div>
+                <div class="card-wave">
+                    <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                    <path d="M0.00,49.98 C159.14,-9.36 259.02,111.03 501.97,55.77 L500.00,150.00 L0.00,150.00 Z" style="stroke: none;"></path></svg>                    
+                </div>
+            </div>            
+
+            <div class="card-text">
+                <p>Si usted desea que sus seres queridos sean tratados con <span class="highlight">cariño y dignidad,</span> contáctenos. Contamos con excelentes referencias.</p>
+            </div>
+        </div>
+
+        <!-- card -->
+        <div class="card">
+            <div class="card-draw"
+            data-aos="fade-down"
+            data-aos-easing="ease-out"
+            data-aos-delay="400"></div>
+
+            <!-- wave transition -->
+            <div class="waves-container">
+                <div class="card-wave">
+                    <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                    <path d="M0.00,49.98 C159.14,-9.36 259.02,111.03 501.97,55.77 L500.00,150.00 L0.00,150.00 Z" style="stroke: none;"></path></svg>
+                </div>
+                <div class="card-wave">
+                    <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                    <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 501.97,55.77 L500.00,150.00 L0.00,150.00 Z" style="stroke: none;"></path></svg>
+                </div>
+            </div>
+
+            <div class="card-text">
+                <p>Sabemos entender la situación economica de cada familia, y contamos con <span class="highlight">excelentes precios</span> adaptados a cada caso.</p>
+            </div>
+        </div>
+
+        </div>
+        
+    </section>
+
+<!-- FACILITIES -->
+    <section id="facilities">
+        <h1>Nuestras Instalaciones</h1>
+        <h2>Contamos con cómodas instalaciones para hacer que se sientan como en casa.<br />
+        Cómodos dormitorios con máximo de tres camas.
+        Dos baños, amplia sala de estar, y patio con espacios verdes.</h2>
+
+        <!-- Slider main container -->
+        <div class="swiper mySwiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <img src="./images/gallery1.webp" alt="Cumple de Irma">
+                    <p>Celebramos los cumpleaños todos juntos como una familia.</p>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/gallery2.webp" alt="Foto de las habitaciones">
+                    <p>Habitaciones de 2 o 3 camas</p>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/gallery3.webp" alt="Foto de las habitaciones">
+                    <p>Habitaciones cómodas y bien amuebladas.</p>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/gallery4.webp" alt="Cumple de Alberto">
+                    <p>¡Nunca se es demasiado grande para festejar tu cumple!</p>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/gallery5.webp" alt="Abuelos tomando aire">
+                    <p>Disfrutando de los días lindos bajo la sombra.</p>
+                </div>
+            </div>
+        </div>
+
+        <img id="swipe-icon" src="./images/swipe.svg" alt="desliza para cambiar de foto">
+
+
+    </section>
+
+
+    <section id="reviews">
+        <h1>Opiniones</h1>
+
+        <div class="reviews-container">
+
+            <div class="reviews-track">
+
+            <!-- REVIEW -->
+            <div class="review-card">
+                <div class="stars">            
+                    <i class="fa fa-star" aria-hidden="true"></i>          
+                    <i class="fa fa-star" aria-hidden="true"></i>          
+                    <i class="fa fa-star" aria-hidden="true"></i>          
+                    <i class="fa fa-star" aria-hidden="true"></i>          
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
+                <!-- REVIEW TEXT -->
+                <figure>
+                    <blockquote>
+                        <em>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, illum!</em>
+                    </blockquote>
+                    <figcaption>Name Lastname</figcaption>
+                </figure>
+            </div>
+            
+            <!-- REVIEW -->
+            <div class="review-card">
+                <div class="stars">            
+                    <i class="fa fa-star" aria-hidden="true"></i>          
+                    <i class="fa fa-star" aria-hidden="true"></i>          
+                    <i class="fa fa-star" aria-hidden="true"></i>          
+                    <i class="fa fa-star" aria-hidden="true"></i>          
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
+                <!-- REVIEW TEXT -->
+                <figure>
+                    <blockquote>
+                        <em>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo, voluptas eveniet deserunt rem aliquam tempore.</em>
+                    </blockquote>
+                    <figcaption>Name Lastname</figcaption>
+                </figure>
+            </div>
+            
+            <!-- REVIEW -->
+            <div class="review-card">
+                <div class="stars">            
+                    <i class="fa fa-star" aria-hidden="true"></i>          
+                    <i class="fa fa-star" aria-hidden="true"></i>          
+                    <i class="fa fa-star" aria-hidden="true"></i>          
+                    <i class="fa fa-star" aria-hidden="true"></i>          
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
+                <!-- REVIEW TEXT -->
+                <figure>
+                    <blockquote>
+                        <em>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, unde nisi! Beatae repellendus id asperiores natus optio nihil enim iure.</em>
+                    </blockquote>
+                    <figcaption>Name Lastname</figcaption>
+                </figure>
+            </div>
+            
+            <!-- REVIEW -->
+            <div class="review-card">
+                <div class="stars">            
+                    <i class="fa fa-star" aria-hidden="true"></i>          
+                    <i class="fa fa-star" aria-hidden="true"></i>          
+                    <i class="fa fa-star" aria-hidden="true"></i>          
+                    <i class="fa fa-star" aria-hidden="true"></i>          
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
+                <!-- REVIEW TEXT -->
+                <figure>
+                    <blockquote>
+                        <em>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem veniam molestiae exercitationem numquam ex, corporis quos.</em>
+                    </blockquote>
+                    <figcaption>Name Lastname</figcaption>
+                </figure>
+            </div>
+            
+<!-- REPEAT FIRST 2 CARDS -->
+            <!-- REVIEW -->
+            <div class="review-card">
+                <div class="stars">            
+                    <i class="fa fa-star" aria-hidden="true"></i>          
+                    <i class="fa fa-star" aria-hidden="true"></i>          
+                    <i class="fa fa-star" aria-hidden="true"></i>          
+                    <i class="fa fa-star" aria-hidden="true"></i>          
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
+                <!-- REVIEW TEXT -->
+                <figure>
+                    <blockquote>
+                        <em>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, illum!</em>
+                    </blockquote>
+                    <figcaption>Name Lastname</figcaption>
+                </figure>
+            </div>
+
+            <!-- REVIEW -->
+            <div class="review-card">
+                <div class="stars">            
+                    <i class="fa fa-star" aria-hidden="true"></i>          
+                    <i class="fa fa-star" aria-hidden="true"></i>          
+                    <i class="fa fa-star" aria-hidden="true"></i>          
+                    <i class="fa fa-star" aria-hidden="true"></i>          
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
+                <!-- REVIEW TEXT -->
+                <figure>
+                    <blockquote>
+                        <em>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo, voluptas eveniet deserunt rem aliquam tempore.</em>
+                    </blockquote>
+                    <figcaption>Name Lastname</figcaption>
+                </figure>
+            </div>
+
+            </div>
+        </div>
+    
+    </section>
+
+    <!-- LOCATION -->
+    <section id="location">
+        <!-- make the section a link to map on small screen -->
+        <a class="map-link" href="https://www.google.com.uy/maps/@-34.7151277,-55.9666492,17.96z?hl=es-419" target="_blank"></a>
+
+        <!-- text for full screen -->
+        <div class="text-container">
+            <div class="top-text">
+                <p>Haz click en los números o en la dirección</p>
+                <i class="fa-solid fa-hand-point-down"></i>
+            </div>
+            <ul>
+                <li><a href="https://www.google.com.uy/maps/@-34.7151277,-55.9666492,17.96z?hl=es-419" target="_blank">Vicente Gorostiaga M2 <i class="fa-solid fa-map"></i></a></li>
+                <li><small>Entre Aurelio Casas y Carlos Roxlo</small></li>
+                <li><a href="tel:2292 3046">2292 3046 <i class="fa-solid fa-phone" target="_blank"></i></a></li>
+                <li><a href="https://wa.me/59894514286?text=Quisiera saber mas sobre casa Stella!" target="_blank"> 094 514 286 <i class="fa-brands fa-whatsapp-square"></i></a></li>
+            </ul>          
+            <p>Estamos al lado de la terminal de COPSA</p> 
+        </div> 
+    </section>
+
+<!-- on small screens show this section -->
+    <div class="location-auxiliar">
+        <div class="top-text">
+            <p>Haz click en los números o en la dirección</p>
+            <i class="fa-solid fa-hand-point-down"></i>
+        </div>
+        <ul>
+            <li>
+                <a href="https://www.google.com.uy/maps/@-34.7151277,-55.9666492,17.96z?hl=es-419" target="_blank">
+                    <i class="fa-solid fa-map"></i><br />
+                    Vicente Gorostiaga M2
+                </a>
+            </li>
+            <li><small>Entre Aurelio Casas y Carlos Roxlo</small></li>
+            <li><a href="tel:2292 3046"><i class="fa-solid fa-phone" target="_blank"></i> 2292 3046</a></li>
+            <li><a href="https://wa.me/59894514286?text=Quisiera saber mas sobre casa Stella!" target="_blank"><i class="fa-brands fa-whatsapp-square"></i> 094 514 286</a></li>
+        </ul>          
+        <p>Estamos al lado de la terminal de COPSA</p> 
+    </div>
+
+    <!-- CONTACT -->
+    <section id="contact">
+
+        <div class="contact-container">
+
+            <!-- contact form -->
+            <form name="contactForm" id="contactForm" action="https://formsubmit.co/rich4shioo@gmail.com" method="POST" class="endForm">
+                <input type="hidden" name="_next" value="http://casastella.me/#contacted#">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="box">
+                <input type="hidden" name="_subject" value="Nuevo mensaje de la web!">
+                <input type="text" name="name" id="name" placeholder="Name" required>
+                <input type="email" name="email" id="email" placeholder="Email" required>
+                <input type="tel" name="tel" id="tel" placeholder="Teléfono">
+                <textarea name="textarea" id="textarea" cols="30" rows="11" placeholder="Mensaje" form="contactForm"></textarea>
+                <input type="submit" value="ENVIAR">
+            </form>
+
+            <!-- contact text and draw -->
+            <div class="contact-text">
+                <div class="contact-draw">
+                    <img src="./images/contact-1.svg" alt="dibujo de una persona junto a una planilla">
+                </div>
+                <p>Consulte todas sus dudas enviando un correo, o haga click en los <a href="#location" class="highlight">números</a> para contactarnos directamente por llamada o por whatsapp.<br><br>Haga su reserva ahora. <strong class="highlight">Los cupos son limitados.</strong></p>
+            </div>
+    
+        </div>
+    </section>
+
+    <!-- modal to show after send message -->
+    <div class="modal-container toggle-modal">
+        <div class="modal">
+            <div class="modal-draw"></div>
+
+            <div class="modal-text">
+                <p>
+                Mensaje enviado, nos pondremos en contacto a la brevedad.<br />
+                Si es urgente llámenos al: 
+                <a href="tel:094514286">094 514 286</a>
+                </p>
+            </div>
+
+            <div class="modal-button">CERRAR</div>
+        </div>
+    </div>
+
+    <!-- back to the top button -->
+    <div id="back-button" class="scrolled">
+        <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    </div>
+
+
+    <footer>
+        <p><a href="https://wa.me/59893966795?text=Necesito un sitio web!" target="_blank">Hecho por Ricardo Nardochone 2022</a></p>
+    </footer>
+</body>
+</html>

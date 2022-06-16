@@ -1,0 +1,89 @@
+#facilities{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $main-color;
+    color: white;
+    text-align: center;
+
+    h1{
+        color: black;
+        font-weight: 900;
+        width: 90%;
+    }
+    h2{
+        width: min(700px, 80%);
+        font-weight: 700;
+        margin-bottom: 50px;
+    }
+
+    /* Swiper */
+    .swiper {
+        width: min(700px, 90%);
+        .swiper-slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 3px;
+            box-shadow: 0 0 0 15px white,
+                        0 0 0 16px black,
+                        15px 15px 20px 10px rgba(0, 0, 0, 0.5);
+            font-weight: bold;
+            img{
+                width: 100%;
+                object-fit: cover;
+            }
+            p{
+                position: absolute;
+                bottom: 0;
+                padding: 20px;
+                border-radius: 20px 20px 0 0;
+                background-color: rgba(5, 5, 5, 0.75);
+                font-size: 1.4rem;
+                text-shadow: 1px 1px 0 black;
+            }
+        }
+    }
+
+    #swipe-icon{
+        margin-top: 50px;
+        filter: invert(1);
+        width: 80px;
+        height: 80px;
+        animation: swipe .5s ease-in-out infinite alternate;
+        transform-origin: bottom center;
+    }
+}
+
+@keyframes swipe {
+    0%{
+        transform: rotateZ(-10deg);
+    }
+    100%{
+        transform: rotateZ(10deg);
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    #facilities{
+        /* Swiper */
+        .swiper {
+            width: min(700px, 90%);
+            .swiper-slide {
+                border-radius: 0;
+                font-size: 10px;
+                box-shadow: 0 0 0 5px white,
+                            0 0 0 6px black,
+                            5px 5px 10px 5px rgba(0, 0, 0, 0.5);
+                p{
+                    padding: 10px;
+                    font-size: 1.1rem;
+                }
+            }
+        }
+    }
+}

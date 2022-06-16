@@ -1,0 +1,166 @@
+/* NAVBAR */
+nav {
+    width: 100%;
+    min-height: 50px;
+    display: block;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 15px;
+
+    background-color: $main-color;
+    box-shadow: 0 10px 20px black;
+
+    ul {
+        display: flex;
+        justify-content: flex-start;
+        gap: 40px;
+        li {
+            a {
+                position: relative;
+                color: white;
+                transform: scale(1);
+                transition: all 0.3s ease-in;
+
+                /* hover and selected effect */
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 0;
+                    height: 1px;
+                    top: -2px;
+                    left: 50%;
+                    background-color: white;
+                    box-shadow: 0 25px 0 0 white, 0 25px 3px 0 white,
+                        0 0 3px 0 white;
+                    transition: all 0.3s ease-in;
+                }
+
+                /* selected */
+                &:hover::before,
+                &.selected::before {
+                    left: 0;
+                    width: 100%;
+                }
+
+                /* hide icons by default */
+                .nav-icon {
+                    display: none;
+                }
+                /* nav bar text */
+                p {
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    nav {
+        padding: 10px;
+        ul {
+            justify-content: space-evenly;
+            gap: 0;
+            li {
+                a {
+                    display: table-cell;
+                    vertical-align: middle;
+                    text-align: center;
+                    text-decoration: none;
+                    width: 30px;
+                    height: 30px;
+                    transform: scale(1) translateY(0);
+                    background-color: rgba(137, 10, 90, 0);
+                    border-radius: 50%;
+                    box-shadow: 0 0 0 1px $main-color;
+                    p {
+                        /* hide navbar text */
+                        display: none;
+                    }
+                    .nav-icon {
+                        display: block;
+                    }
+
+                    &:hover {
+                        color: rgb(248, 8, 160);
+                        text-shadow: 0 0 5px white;
+                        text-decoration: none;
+                    }
+
+                    /* round inside corners */
+                    &::before,
+                    &::after {
+                        box-shadow: -4px -6px $main-color;
+                        content: "";
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                        background-color: transparent;
+                        position: absolute;
+                        top: 50%;
+                        right: 0;
+                        left: 100;
+                        transform: translate(144%, 5%);
+                    }
+                    &::before {
+                        left: 0;
+                        transform: translate(-144%, 5%);
+                        box-shadow: 4px -6px $main-color;
+                    }
+                    &:hover::before,
+                    &.selected::before {
+                        width: 10px;
+                    }
+
+                    /* selected */
+                    &.selected {
+                        transform: scale(2) translateY(40%);
+                        box-shadow: 0 0 0 5px $main-color, 0 10px 10px black;
+                        background-color: rgb(248, 8, 160);
+                        color: white;
+                        text-shadow: none;
+                        text-decoration: none;
+                        z-index: 200;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* prevent inside corners of overlaping on small screens */
+@media (max-width: 300px) {
+    nav > ul > li > a {
+        &::before,
+        &::after {
+            display: none;
+        }
+    }
+}
+
+/* CUSTOM SCROLLBAR */
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
+::-webkit-scrollbar:hover {
+    width: 1rem;
+}
+::-webkit-scrollbar-track {
+    background: rgb(131, 131, 131);
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(68, 68, 68);
+    border: 1px solid rgb(131, 131, 131);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(29, 29, 29);
+    border-radius: 10px;
+}
+@supports (scrollbar-color: red blue) {
+    * {
+        scrollbar-color: rgb(68, 68, 68) rgb(131, 131, 131);
+        scrollbar-width: thin;
+    }
+}

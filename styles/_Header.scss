@@ -1,0 +1,87 @@
+header{
+    height: 100vh;
+    overflow-x: hidden;
+    margin-bottom: -50px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    color: white;
+    background: rgb(250,207,255);
+    background: linear-gradient(90deg, rgba(250,207,255,1) 0%, rgba(2,115,68,1) 100%);
+    background-image: linear-gradient(90deg, rgba(207, 94, 136, 0.15), rgb(4, 58, 59, 0.2) 20% 70%), url("../images/background.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    h1, h2{
+        text-shadow: 2px 2px 0 black, 0 0 10px black;
+        text-align: left;
+        margin: 0;
+    }
+
+    form{
+        margin-top: 10px;
+        input{
+            font-size: 1.1rem;
+            outline: none;
+            border: none;
+        }
+        input[type=email]{
+            width: 350px;
+            padding: 8px 110px 8px 15px;
+            border-radius: 50px;
+            box-shadow: 2px 2px 5px black;
+        }
+        input[type=submit]{
+            width: 100px;
+            color: white;
+            font-weight: 700;
+            background-color: $main-color;
+            padding: 5px;
+            margin-left: -108px;
+            border-radius: 50px;
+            cursor: pointer;
+            transform: scale(1) translateY(0);
+            filter: brightness(1);
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s ease-in;
+            &:hover{
+                filter: brightness(1.3);
+                box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5), 0 2px 5px black;
+            }
+            &:active{
+                transform: scale(1) translateY(1px);
+                filter: brightness(0.5);
+                box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5), 0 0 5px black;
+            }
+        }
+    }
+}
+@media (max-width: 700px) {
+    header{
+        background-image:
+            linear-gradient(90deg, rgba(207, 94, 136, 0.15), rgb(4, 58, 59, 0.2) 20% 70%),
+            url("../images/background-small.webp");
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px 60px 20px;
+        h1, h2{
+            text-align: center;
+        }
+        form{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            input[type=email]{
+                width: min(350px, 95%);
+            }
+            input[type=submit]{
+                margin-left: -104px;
+            }
+        }
+    }
+}
