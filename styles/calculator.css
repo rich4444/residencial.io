@@ -1,0 +1,246 @@
+*,
+*::after,
+*::before:not(i) {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+}
+
+:root{
+    --main-color: rgb(10, 100, 100);
+    --highlight-color: rgb(250, 50, 150);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+section {
+    background-color: var(--main-color);
+}
+
+.highlight{
+    color: var(--highlight-color);
+    font-weight: 700;
+    text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 3px 3px 10px #000;
+}
+
+
+h1{
+    color: white !important;
+    margin-bottom: 50px;
+    font-size: 2rem;
+}
+
+
+.estimate-form, .estimate-text {
+    max-width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 50px 10px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    font-size: 1.2rem;
+    color: white;
+}
+
+/* Text on the left */
+.estimate-text > h2{
+    margin-top: 30px;
+    font-size: 1.3rem;
+}
+.estimate-text > .disclaimer{
+    font-size: .8rem;
+}
+
+
+/* FORM */
+label{
+    text-indent: 10px;
+}
+
+/* Keep number and checkbox on the same line that their labels */
+.inline-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+input,
+select,
+button,
+.checkmark{
+    background-color: white;
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    text-align: center;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid var(--highlight-color);
+    border-radius: 30px;    
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5)
+}
+
+/* on hover make them brihter */
+input:hover,
+select:hover,
+button:hover,
+input[type="checkbox"]:hover ~ .checkmark{
+    filter: brightness(1.1);
+}
+
+/* custom dropdown arrow */
+select {
+    margin-top: -5px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url("../images/dropdown.webp");
+    background-repeat: no-repeat, repeat;
+    background-position: right 1.2em top 50%, 0 0;
+    background-size: .8em auto, 100%;
+} select::-ms-expand {
+    display: none;
+}
+/* Change border radius on bottom so it connect with the options box */
+select.open {
+    border-radius: 30px 30px 0 0;
+}
+
+/* custom number arrows */
+input[type="number"] {
+    border-radius: 0;
+    -moz-appearance: textfield;
+    appearance: textfield;
+    margin: 0;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.number-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.increase-number{
+    border-radius: 0 50px 50px 0;
+}
+.decrease-number{
+    border-radius: 50px 0 0 50px;
+}
+
+/* custom check input
+place real checkpoint with opacity 0 on top of fake checkpoint */
+input[type="checkbox"] {
+    position: relative;
+    z-index: 2;
+    width: 30px;
+    height: 30px;
+    opacity: 0;
+    cursor: pointer;
+    margin-right: 25px;
+}
+
+input[type="checkbox"]:checked ~ .checkmark{
+    background-image: url("../images/check.webp");
+    background-repeat: no-repeat, repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+.checkmark {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    padding: 0;
+    height: 30px;
+    width: 30px;
+    margin-left: -55px;
+}
+
+/* generate button */
+#generate{
+    margin-top: 20px;
+    background-color: var(--highlight-color);
+    color: white;
+    font-weight: 700;
+    border-color: white;
+    transition: all 0.3s ease;
+}
+button:active{
+    filter: brightness(0.5);
+    transform: translateY(1px);
+    box-shadow: 0 0 5px black;
+}
+
+.estimate-output{
+    padding: 50px 30px;
+    color: white;
+    flex-direction: column;
+    overflow: hidden;
+    display: none;
+    max-width: 1000px;
+    margin: auto;
+}
+.estimate-output.show-estimate{
+    display: block;
+}
+
+#price{
+    font-size: 2rem;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border: 4px solid var(--highlight-color);
+    border-radius: 200px;
+}
+
+.estimate-output > p{
+    padding: 30px;
+    font-size: 1.3rem;
+    border-bottom: 4px solid var(--highlight-color);
+    border-radius: 0 0 50px 50px;
+}
+
+.buttons-container *{
+    width: 100%;
+    margin: auto;
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+#cta{
+    background-color: var(--highlight-color);
+    border-color: white;
+    color: white;
+}
+
+
+@media (min-width: 700px){
+    .estimate-input{
+        display: flex;
+        gap: 40px;
+        max-width: 1000px;
+        margin: auto;
+        padding: 50px;
+    }
+
+    .estimate-text, .estimate-form{
+        flex: 1;
+    }
+
+    .buttons-container{
+        display: flex;
+        gap: 20px
+    }
+}

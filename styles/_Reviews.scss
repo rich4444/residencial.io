@@ -1,4 +1,7 @@
 #reviews{
+    *{
+    user-select: none;
+    }
     .reviews-container{
         width: min(900px, 100%);
         min-height: 100%;

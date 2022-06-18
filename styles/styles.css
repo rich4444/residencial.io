@@ -30,27 +30,19 @@ body.prevent-scroll {
 }
 
 /* Cards */
-.cubic {
-  /* cubic background */
-  background: repeating-radial-gradient(circle, transparent, transparent 13.6px, #0a6464 13.6px, #0a6464 17.6px), repeating-radial-gradient(circle, transparent, transparent 13.6px, #0a6464 13.6px, #0a6464 17.6px), rgba(10, 100, 100, 0.5);
-  background-size: 78px 78px;
-  background-position: 0 0, 39px 39px, 78px 39px;
-  background-color: rgba(10, 100, 100, 0.5);
-}
-
 .cards-container {
-  width: min(900px, 90%);
+  width: min(1000px, 90%);
   margin: auto;
   margin-bottom: 60px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   align-items: center;
   justify-content: center;
-  gap: min(30px, 5%);
+  gap: min(20px, 5%);
 }
 .cards-container .card {
   padding-top: 20px;
-  width: min(300px, 100%);
+  width: 100%;
   height: 100%;
   border-radius: 20px;
   overflow: hidden;
@@ -79,9 +71,6 @@ body.prevent-scroll {
 .cards-container .card:nth-child(2) .card-text {
   background: linear-gradient(0deg, rgb(68, 124, 197) 0%, rgb(100, 28, 167) 100%);
 }
-.cards-container .card:nth-child(3) {
-  transform: translateY(60px);
-}
 .cards-container .card:nth-child(3) .card-draw {
   background-image: url(../images/money-2.svg);
 }
@@ -93,6 +82,21 @@ body.prevent-scroll {
 }
 .cards-container .card:nth-child(3) .card-text {
   background: linear-gradient(0deg, rgb(197, 166, 65) 0%, rgb(172, 91, 24) 100%);
+}
+.cards-container .card:nth-child(4) {
+  transform: translateY(30px);
+}
+.cards-container .card:nth-child(4) .card-draw {
+  background-image: url(../images/presupuesto.svg);
+}
+.cards-container .card:nth-child(4) .waves-container .card-wave {
+  fill: rgb(218, 176, 214);
+}
+.cards-container .card:nth-child(4) .waves-container .card-wave:last-child {
+  fill: rgb(156, 117, 175);
+}
+.cards-container .card:nth-child(4) .card-text {
+  background: linear-gradient(0deg, rgb(218, 176, 214) 0%, rgb(156, 117, 175) 100%);
 }
 .cards-container .card .waves-container {
   margin-top: 50px;
@@ -114,18 +118,25 @@ body.prevent-scroll {
   background: linear-gradient(0deg, rgb(17, 192, 17) 0%, rgb(19, 161, 19) 100%);
   padding: 20px;
   padding-bottom: 50px;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 900;
 }
 
-@media screen and (max-width: 700px) {
+@media (max-width: 1000px) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+@media (max-width: 700px) {
   .cards-container {
     display: flex;
     flex-direction: column;
     width: min(500px, 90%);
+    gap: 40px;
   }
-  .cards-container .card {
-    width: 100%;
+  .cards-container .card:nth-child(2), .cards-container .card:nth-child(4) {
+    transform: translateY(0);
   }
 }
 /* NAVBAR */
@@ -245,6 +256,10 @@ nav ul li a p {
 }
 /* prevent inside corners of overlaping on small screens */
 @media (max-width: 300px) {
+  .hideOnSmall {
+    display: none;
+  }
+
   nav > ul > li > a::before, nav > ul > li > a::after {
     display: none;
   }
@@ -373,11 +388,6 @@ header form input[type=submit]:active {
   text-align: center;
   /* Swiper */
 }
-#facilities h1 {
-  color: black;
-  font-weight: 900;
-  width: 90%;
-}
 #facilities h2 {
   width: min(700px, 80%);
   font-weight: 700;
@@ -451,6 +461,12 @@ header form input[type=submit]:active {
     padding: 10px;
     font-size: 1.1rem;
   }
+}
+#reviews * {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 #reviews .reviews-container {
   width: min(900px, 100%);
@@ -638,7 +654,7 @@ header form input[type=submit]:active {
   flex: 1;
 }
 .contact-container .contact-text p {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: white;
 }
@@ -660,9 +676,9 @@ header form input[type=submit]:active {
   border: none;
   background-color: rgba(255, 255, 255, 0.5);
   border-bottom: 2px solid rgb(250, 50, 150);
-  padding: 10px;
+  padding: 10px 20px;
   margin-bottom: 10px;
-  border-radius: 10px;
+  border-radius: 30px;
   font-size: 1.1rem;
   box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
   resize: none;
@@ -670,22 +686,25 @@ header form input[type=submit]:active {
 .contact-container .endForm input:focus, .contact-container .endForm textarea:focus {
   background-color: rgba(255, 255, 255, 0.75);
 }
+.contact-container .endForm textarea {
+  border-radius: 15px;
+}
 .contact-container .endForm input[type=submit] {
-  background-color: hsl(330deg, 95%, 59%);
+  background-color: rgb(250, 50, 150);
   color: white;
-  transform: translateY(0);
-  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5), 10px 10px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
   transition: all 0.3s;
-  font-weight: 900;
+  font-weight: 700;
+  border-bottom: 2px solid white;
+  border-radius: 30px;
 }
 .contact-container .endForm input[type=submit]:hover {
-  background-color: hsl(330deg, 95%, 62%);
-  transform: translateY(-1px);
+  filter: brightness(1.1);
 }
 .contact-container .endForm input[type=submit]:active {
   transform: translateY(1px);
-  background-color: hsl(330deg, 95%, 30%);
-  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5), 0 0 5px black;
+  filter: brightness(0.5);
+  box-shadow: 0 0 5px black;
 }
 
 @media (max-width: 700px) {
@@ -711,10 +730,10 @@ header form input[type=submit]:active {
   }
 }
 /*#region General */
-.highlight {
+.highlight, h1 {
   color: rgb(250, 50, 150);
   font-weight: 700;
-  text-shadow: 2px 2px 0 black, 0 0 10px black;
+  text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 3px 3px 10px #000;
 }
 
 a {
@@ -729,9 +748,11 @@ ul * {
 section {
   padding: 100px 0;
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
 h1 {
+  color: white;
   text-align: center;
   margin-bottom: 50px;
   font-size: 2rem;
@@ -809,11 +830,15 @@ footer {
   background-color: rgb(10, 100, 100);
   padding: 50px 0 10px 10px;
 }
+footer i {
+  margin-left: 10px;
+}
 footer:hover {
   color: white;
+  text-decoration: underline;
 }
 
-#back-button {
+#back-button, .showOnSmall {
   z-index: 200;
   width: 50px;
   height: 50px;
@@ -832,17 +857,27 @@ footer:hover {
   transition: all 0.5s;
   box-shadow: 5px 5px 10px black;
 }
-#back-button.scrolled {
+#back-button.scrolled, .showOnSmall.scrolled {
   opacity: 0;
 }
-#back-button:active {
+#back-button:active, .showOnSmall:active {
   filter: brightness(0.5);
   transform: translateY(2px);
+}
+
+.showOnSmall {
+  display: none;
+  bottom: 80px;
 }
 
 @media (max-width: 700px) {
   .modal-container > .modal > .modal-draw {
     width: 200px;
     height: 150px;
+  }
+}
+@media (max-width: 300px) {
+  .showOnSmall {
+    display: block;
   }
 }/*# sourceMappingURL=styles.css.map */

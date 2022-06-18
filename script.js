@@ -57,7 +57,6 @@ function scrollSpy() {
         let id = sec.getAttribute("id");
 
         if (top >= offset - 150 && top < offset + height - 150) {
-            console.log(sec);
             navLinks.forEach((link) => {
                 if (link.href.includes(id)) {
                     link.classList.add("selected");

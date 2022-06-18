@@ -40,7 +40,7 @@ body.prevent-scroll{
 .highlight{
     color: $hightlight-color;
     font-weight: 700;
-    text-shadow: 2px 2px 0 black, 0 0 10px black;
+    text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 3px 3px 10px #000;
 }
 
 a{
@@ -55,9 +55,12 @@ ul *{
 section{
     padding: 100px 0;
     overflow-x: hidden;
+    min-height: 100vh;
 }
 
 h1{
+    @extend .highlight;
+    color: white;
     text-align: center;
     margin-bottom: 50px;
     font-size: 2rem;
@@ -92,6 +95,7 @@ h1{
             background-repeat: no-repeat;
             background-position: center;
             margin: auto;
+
         }
 
         .modal-text *{
@@ -141,12 +145,16 @@ h1{
 footer{
     background-color: $main-color;
     padding: 50px 0 10px 10px;
+    i{
+        margin-left: 10px;
+    }
     &:hover{
         color: white;
+        text-decoration: underline;
     }
 }
 
-#back-button{
+#back-button, .showOnSmall{
     z-index: 200;
     width: 50px;
     height: 50px;
@@ -173,9 +181,21 @@ footer{
     }
 }
 
+
+.showOnSmall{
+    display: none;
+    bottom: 80px;    
+}
+
 @media (max-width: 700px) {
     .modal-container > .modal > .modal-draw{
         width: 200px;
         height: 150px;
+    }
+}
+
+@media (max-width: 300px) {
+    .showOnSmall{
+        display: block;
     }
 }

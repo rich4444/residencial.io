@@ -10,7 +10,6 @@ nav {
 
     background-color: $main-color;
     box-shadow: 0 10px 20px black;
-
     ul {
         display: flex;
         justify-content: flex-start;
@@ -131,6 +130,9 @@ nav {
 
 /* prevent inside corners of overlaping on small screens */
 @media (max-width: 300px) {
+    .hideOnSmall{
+        display: none;
+    }
     nav > ul > li > a {
         &::before,
         &::after {

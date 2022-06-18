@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- METADATA -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calculadora online de CasaStella para obtener una estimación de cuota. CasaStella es un hogar para adultos mayores, donde se los trata como familia.">
+
+    <title>Casa Stella - Calculadora</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    
+    <!-- FONTAWESOME -->
+    <script defer src="https://kit.fontawesome.com/e26da2372a.js" crossorigin="anonymous"></script>
+
+    <!-- NUNITO FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700;900&display=swap" rel="stylesheet">
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="./styles/calculator.css">
+
+    <!-- CUSTOM JAVASCRIPT -->
+    <script src="calculator.js" defer></script>
+</head>
+<body>
+    <section>
+        <div class="estimate-input">
+            <div class="estimate-text">
+                <h1 class="highlight">Calculadora de Cuota Estimada</h1>
+                <p>Esta herramienta le permitirá saber de forma <span class="highlight">estimada</span> cual será el valor de su cuota. <br />
+                Tenga presente que de ninguna forma este es el precio final, el cual se determinara durante la entrevista en persona. <br />
+                De la misma forma este precio puede llegar a variar dependiendo de cada caso, entendemos muy bien las distintas situaciones por las que puedan estar pasando y siempre vamos a poder llegar a un precio accesible.</p>
+
+                <h2>Descargo</h2>
+                <p class="disclaimer">La información que ingrese en el formulario no es almacenada ni enviada a ninguna base de datos. Este es un proceso completamente confidencial, y privado. <br />
+                Al llenar el formulario usted accede voluntariamente a responder esas preguntas, y entiende que es con la sola finalidad de dar un presupuesto aproximado.
+                <br /><br />
+                *(Estancia solo de día)<br />
+                Para este presupuesto se toma un caso estándar de cuidados durante el día, lo cual son 25 días al mes, 8 horas al día, con comidas incluidas. El precio puede variar dependiendo de la cantidad de días, horas, o incluso el horario que necesite.</p>
+            </div>
+
+            <div class="estimate-form">
+                <div class="inline-container">
+                    <label for="age">Edad</label>
+                    <div class="number-container">
+                        <button class="decrease-number">-</button>
+                        <input class="input" type="number" name="age" id="age" min="50" max="100" value="50">
+                        <button class="increase-number">+</button>
+                    </div>
+                </div>
+
+                <label for="mobility">Movilidad Asistida</label>
+                <select class="input" name="mobility" id="mobility">
+                    <option value="none" selected>Ninguna</option>
+                    <option value="baston">Bastón</option>
+                    <option value="andador">Andador</option>
+                    <option value="silla">Silla de ruedas</option>
+                </select>
+                
+                <label for="diet">Dieta Especial</label>
+                <select class="input" name="diet" id="diet">
+                    <option value="none" selected>Ninguna</option>
+                    <option value="vegana">Vegana/Vegetariana</option>
+                    <option value="diabetica">Diabetica</option>
+                    <option value="celiaca">Celiaca</option>
+                </select>
+                
+                <label for="senil">Demencia Senil</label>
+                <select class="input" name="senil" id="senil">
+                    <option value="none" selected>No tiene</option>
+                    <option value="leve">Leve</option>
+                    <option value="medio">Intermedio</option>
+                    <option value="avanzado">Avanzado</option>
+                </select>
+                
+                <label for="alzheimer">Alzheimer</label>
+                <select class="input" name="alzheimer" id="alzheimer">
+                    <option value="none" selected>No tiene</option>
+                    <option value="leve">Leve</option>
+                    <option value="medio">Intermedio</option>
+                    <option value="avanzado">Avanzado</option>
+                </select>
+
+                <label for="parkinson">Parkinson</label>
+                <select class="input" name="parkinson" id="parkinson">
+                    <option value="none" selected>No tiene</option>
+                    <option value="leve">Leve</option>
+                    <option value="medio">Intermedio</option>
+                    <option value="avanzado">Avanzado</option>
+                </select>
+                
+                <label for="daiper">Usa Pañal</label>
+                <select class="input" name="daiper" id="daiper">
+                    <option value="none" selected>No</option>
+                    <option value="noche">Solo en la noche</option>
+                    <option value="siempre">Siempre</option>
+                </select>
+
+                <div class="inline-container">
+                    <label for="room">Habitación Individual</label>
+                    <div class="checkbox-container">
+                        <input class="input" type="checkbox" name="room" id="room">
+                        <span class="checkmark"></span>
+                    </div>
+                </div>
+
+                <div class="inline-container">
+                    <label for="day">Estancia solo de día*</label>
+                    <div class="checkbox-container">
+                        <input class="input" type="checkbox" name="day" id="day">
+                        <span class="checkmark"></span>
+                    </div>
+                </div>
+
+                <button id="generate">Generar Estimativo</button>
+            </div>
+        </div>
+
+        <div class="estimate-output">
+            <h1 id="price">Su cuota estimada es entre: <br /> $15.000 y $17.000</h1>
+            <p>Tenga presente que este es solo un precio estimativo, para llegar a uno mas exacto concrete una entrevista con nosotros usando el botón a continuación.<br /><br />
+            También recuerde que nuestra mayor prioridad es poder brindar un servicio accesible y de calidad, asi que no dude en hablar con nosotros directamente sobre su situación en particular.</p>
+            
+            <div class="buttons-container">
+                <a href="index.html#contact">
+                    <button id="cta">Agendar</button>
+                </a>
+                <a href="index.html">
+                    <button>Volver</button>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>
