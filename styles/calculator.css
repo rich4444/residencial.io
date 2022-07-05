@@ -63,18 +63,12 @@ label{
     text-indent: 10px;
 }
 
-/* Keep number and checkbox on the same line that their labels */
-.inline-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 
 input,
 select,
 button,
-.checkmark{
+.checkmark,
+.inline-container:not(#age-container){
     background-color: white;
     font-size: 1.1rem;
     padding: 10px 15px;
@@ -87,6 +81,7 @@ button,
     cursor: pointer;
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5)
 }
+
 
 /* on hover make them brihter */
 input:hover,
@@ -143,6 +138,22 @@ input[type="number"]::-webkit-outer-spin-button {
     border-radius: 50px 0 0 50px;
 }
 
+#age-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Keep number and checkbox on the same line that their labels */
+.inline-container:not(#age-container) {
+    padding: 5px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+}
+
 /* custom check input
 place real checkpoint with opacity 0 on top of fake checkpoint */
 input[type="checkbox"] {
@@ -170,6 +181,9 @@ input[type="checkbox"]:checked ~ .checkmark{
     height: 30px;
     width: 30px;
     margin-left: -55px;
+    margin-bottom: -3px;
+    border: 2px solid var(--highlight-color);
+    box-shadow: none;
 }
 
 /* generate button */

@@ -12,6 +12,7 @@ const senil = document.getElementById("senil");
 const parkinson = document.getElementById("parkinson");
 const alzheimer = document.getElementById("alzheimer");
 const daiper = document.getElementById("daiper");
+const esq = document.getElementById("esq");
 const room = document.getElementById("room");
 const day = document.getElementById("day");
 
@@ -41,6 +42,7 @@ generateButton.addEventListener("click", () => {
     price += SenilModificator();
     price += AlzheimerModificator();
     price += ParkinsonModificator();
+    price += EsqModificator();
     price += DaiperModificator();
     price += RoomModificator();
     price += AgeModificator();
@@ -103,6 +105,10 @@ function AlzheimerModificator (){
             break;
     }
     return modf
+}
+
+function EsqModificator (){
+    return esq.checked ? 4 : 0;
 }
 
 function DaiperModificator (){
