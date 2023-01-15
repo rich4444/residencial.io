@@ -259,7 +259,6 @@ nav ul li a p {
   .hideOnSmall {
     display: none;
   }
-
   nav > ul > li > a::before, nav > ul > li > a::after {
     display: none;
   }
@@ -462,6 +461,9 @@ header form input[type=submit]:active {
     font-size: 1.1rem;
   }
 }
+#reviews {
+  min-height: 100%;
+}
 #reviews * {
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -554,7 +556,6 @@ header form input[type=submit]:active {
   #reviews .reviews-container .reviews-track .review-card figcaption {
     font-size: 1.1rem;
   }
-
   /* translateX = card width * cards amount(not counting repetead ones) + gap * same cards amount */
   @-webkit-keyframes scroll {
     0% {
@@ -625,7 +626,6 @@ header form input[type=submit]:active {
     width: 100%;
     height: 100%;
   }
-
   .location-auxiliar {
     display: flex;
     flex-direction: column;
@@ -639,6 +639,7 @@ header form input[type=submit]:active {
   }
 }
 #contact {
+  min-height: 100%;
   background-color: rgb(10, 100, 100);
   padding: 75px 0 0 0;
 }
@@ -671,7 +672,8 @@ header form input[type=submit]:active {
   flex-direction: column;
   min-height: 400px;
 }
-.contact-container .endForm input, .contact-container .endForm textarea {
+.contact-container .endForm input,
+.contact-container .endForm textarea {
   outline: none;
   border: none;
   background-color: rgba(255, 255, 255, 0.5);
@@ -683,7 +685,8 @@ header form input[type=submit]:active {
   box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
   resize: none;
 }
-.contact-container .endForm input:focus, .contact-container .endForm textarea:focus {
+.contact-container .endForm input:focus,
+.contact-container .endForm textarea:focus {
   background-color: rgba(255, 255, 255, 0.75);
 }
 .contact-container .endForm textarea {
@@ -746,7 +749,7 @@ ul * {
 }
 
 section {
-  padding: 100px 0;
+  padding: 100px 50px;
   overflow-x: hidden;
   min-height: 100vh;
 }
@@ -838,7 +841,8 @@ footer:hover {
   text-decoration: underline;
 }
 
-#back-button, .showOnSmall {
+#back-button,
+.showOnSmall {
   z-index: 200;
   width: 50px;
   height: 50px;
@@ -857,10 +861,12 @@ footer:hover {
   transition: all 0.5s;
   box-shadow: 5px 5px 10px black;
 }
-#back-button.scrolled, .showOnSmall.scrolled {
+#back-button.scrolled,
+.showOnSmall.scrolled {
   opacity: 0;
 }
-#back-button:active, .showOnSmall:active {
+#back-button:active,
+.showOnSmall:active {
   filter: brightness(0.5);
   transform: translateY(2px);
 }

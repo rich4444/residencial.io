@@ -1,37 +1,38 @@
-
-#contact{
+#contact {
+    min-height: 100%;
     background-color: $main-color;
     padding: 75px 0 0 0;
 }
-.contact-container{
+.contact-container {
     height: 100%;
     width: min(900px, 90%);
     margin: auto;
     display: flex;
     gap: 50px;
-    
-    .contact-text{
+
+    .contact-text {
         flex: 1;
-        p{
+        p {
             font-size: 1.2rem;
             font-weight: 700;
             color: white;
         }
 
-        .contact-draw{
+        .contact-draw {
             width: 280px;
             margin-bottom: 30px;
-            img{
+            img {
                 width: 100%;
             }
         }
     }
-    .endForm{
+    .endForm {
         flex: 1;
         display: flex;
         flex-direction: column;
         min-height: 400px;
-        input, textarea{
+        input,
+        textarea {
             outline: none;
             border: none;
             background-color: rgba(255, 255, 255, 0.5);
@@ -42,25 +43,25 @@
             font-size: 1.1rem;
             box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
             resize: none;
-            &:focus{
+            &:focus {
                 background-color: rgba(255, 255, 255, 0.75);
             }
         }
-        textarea{
+        textarea {
             border-radius: 15px;
         }
-        input[type=submit]{
+        input[type='submit'] {
             background-color: $hightlight-color;
             color: white;
             box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
             transition: all 0.3s;
             font-weight: 700;
             border-bottom: 2px solid white;
-            border-radius: 30px;    
-            &:hover{
+            border-radius: 30px;
+            &:hover {
                 filter: brightness(1.1);
             }
-            &:active{
+            &:active {
                 transform: translateY(1px);
                 filter: brightness(0.5);
                 box-shadow: 0 0 5px black;
@@ -70,26 +71,26 @@
 }
 
 @media (max-width: 700px) {
-    .contact-container{
+    .contact-container {
         flex-direction: column-reverse;
         align-items: center;
         width: min(400px, 95%);
 
-        .contact-text{
-            p{
+        .contact-text {
+            p {
                 font-size: 1.2rem;
                 font-weight: 500;
                 width: 90%;
                 margin: auto;
             }
 
-            .contact-draw{
+            .contact-draw {
                 width: 250px;
                 margin: auto;
                 margin-bottom: 30px;
             }
         }
-        .endForm{
+        .endForm {
             min-height: 400px;
             width: 100%;
         }
